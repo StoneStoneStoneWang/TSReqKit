@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BaseParam.h"
+
+#import "BaseResp.h"
+
+typedef void(^HttpSuccessBlock)(id data);
+
+typedef void(^HttpFailureBlock)(void);
+
 @interface URLSessionManager : NSObject
+
++ (URLSessionManager *)shared;
+
+- (void)setHost:(NSString *)host;
+
+- (void)jsonReqForParam:(BaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
 
 @end

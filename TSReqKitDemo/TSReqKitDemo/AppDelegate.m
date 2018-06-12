@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "URLSessionManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[URLSessionManager shared] setHost:@"http://192.168.3.115"];
+    
+    
     return YES;
 }
 

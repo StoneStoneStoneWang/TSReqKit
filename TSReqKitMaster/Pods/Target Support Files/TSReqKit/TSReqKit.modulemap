@@ -1,0 +1,6 @@
+framework module TSReqKit {
+  umbrella header "TSReqKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
