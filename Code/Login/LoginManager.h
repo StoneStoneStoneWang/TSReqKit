@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "LoginParam.h"
 #import "AccountBean.h"
-#import "LogoutParam.m"
+#import "LogoutParam.h"
 #import "RegParam.h"
 
-typedef void(^LoginResp)(AccountBean *acc);
+typedef void(^LoginResp)(AccountBean *);
 
 
 @interface LoginManager : NSObject
@@ -29,5 +29,5 @@ typedef void(^LoginResp)(AccountBean *acc);
 
 #pragma mark --- 注册
 
-- (void)reg:(RegParam *)param andSucc:(LoginResp)succ;
+//- (void)reg:(RegParam *)param andSucc:(LoginResp)succ;
 @end

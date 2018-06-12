@@ -14,7 +14,7 @@
 
 #import "URLSessionManager.h"
 
-typedef void(^UserResp)(UserBean *user);
+typedef void(^UserResp)(UserBean *);
 
 @interface UserManager : NSObject
 

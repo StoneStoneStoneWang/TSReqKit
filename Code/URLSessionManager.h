@@ -12,7 +12,7 @@
 
 #import "BaseResp.h"
 
-typedef void(^HttpSuccessBlock)(id data);
+typedef void(^HttpSuccessBlock)(id);
 
 typedef void(^HttpFailureBlock)(void);
 
