@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "TSReqKit"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "A Lib For Req."
 s.description  = <<-DESC
 TSReqKit 是一个网络请求封装

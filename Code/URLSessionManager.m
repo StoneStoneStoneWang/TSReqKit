@@ -29,7 +29,7 @@ static URLSessionManager *manager = nil;
 }
 
 - (void)setHost:(NSString *)host {
-    self.host = host;
+    _host = host;
 }
 
 - (void)jsonReqForParam:(BaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail {
