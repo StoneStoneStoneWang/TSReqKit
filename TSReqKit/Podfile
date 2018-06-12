@@ -1,0 +1,11 @@
+
+platform :ios, ‘9.0’
+
+use_frameworks!
+
+target 'TSReqKit' do
+
+# pod 'TFKit',:git=>'/Users/threestonewang/Desktop/TFKit'
+pod 'TSReqKit',:git=>'https://github.com/StoneStoneStoneWang/TSReqKit.git'
+
+end

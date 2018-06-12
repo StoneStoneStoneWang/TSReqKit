@@ -15,6 +15,7 @@
 		6C070A1320CFB3B3002A85EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A1220CFB3B3002A85EB /* main.m */; };
 		6C070A1D20CFB3B3002A85EB /* TSReqKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A1C20CFB3B3002A85EB /* TSReqKitDemoTests.m */; };
 		6C070A2820CFB3B3002A85EB /* TSReqKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A2720CFB3B3002A85EB /* TSReqKitDemoUITests.m */; };
+		6C070A7820CFB6C9002A85EB /* URLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A7720CFB6C9002A85EB /* URLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		6C070A2320CFB3B3002A85EB /* TSReqKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSReqKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C070A2720CFB3B3002A85EB /* TSReqKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSReqKitDemoUITests.m; sourceTree = "<group>"; };
 		6C070A2920CFB3B3002A85EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C070A7620CFB6C9002A85EB /* URLSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSessionManager.h; sourceTree = "<group>"; };
+		6C070A7720CFB6C9002A85EB /* URLSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		6C070A0220CFB3B3002A85EB /* TSReqKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6C070A7520CFB6AF002A85EB /* Code */,
 				6C070A0320CFB3B3002A85EB /* AppDelegate.h */,
 				6C070A0420CFB3B3002A85EB /* AppDelegate.m */,
 				6C070A0620CFB3B3002A85EB /* ViewController.h */,
@@ -130,6 +134,16 @@
 				6C070A2920CFB3B3002A85EB /* Info.plist */,
 			);
 			path = TSReqKitDemoUITests;
+			sourceTree = "<group>";
+		};
+		6C070A7520CFB6AF002A85EB /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				6C070A7620CFB6C9002A85EB /* URLSessionManager.h */,
+				6C070A7720CFB6C9002A85EB /* URLSessionManager.m */,
+			);
+			name = Code;
+			path = ../../Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C070A7820CFB6C9002A85EB /* URLSessionManager.m in Sources */,
 				6C070A0820CFB3B3002A85EB /* ViewController.m in Sources */,
 				6C070A1320CFB3B3002A85EB /* main.m in Sources */,
 				6C070A0520CFB3B3002A85EB /* AppDelegate.m in Sources */,

@@ -20,5 +20,6 @@ s.source       = { :git => "https://github.com/StoneStoneStoneWang/TSReqKit.git"
 
 s.source_files = "Code/**/*.{h,m}"
 
+s.dependency 'AFNetworking', '~> 3.0'
 end
 
