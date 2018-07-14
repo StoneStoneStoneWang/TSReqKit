@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BaseParam.h"
+#import "TSBaseParam.h"
 
-#import "BaseResp.h"
+#import "TSBaseResp.h"
 
 typedef void(^HttpSuccessBlock)(id);
 
@@ -22,6 +22,6 @@ typedef void(^HttpFailureBlock)(void);
 
 - (void)setHost:(NSString *)host;
 
-- (void)jsonReqForParam:(BaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
 
 @end

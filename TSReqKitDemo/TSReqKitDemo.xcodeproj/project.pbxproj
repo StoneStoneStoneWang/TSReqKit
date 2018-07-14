@@ -18,15 +18,15 @@
 		6C070A2820CFB3B3002A85EB /* TSReqKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A2720CFB3B3002A85EB /* TSReqKitDemoUITests.m */; };
 		6C070A7820CFB6C9002A85EB /* URLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A7720CFB6C9002A85EB /* URLSessionManager.m */; };
 		6C070A7A20CFC2E7002A85EB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6C070A7920CFC2E7002A85EB /* Podfile */; };
-		6C070A7D20CFC60F002A85EB /* BaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A7C20CFC60F002A85EB /* BaseParam.m */; };
-		6C070A8120CFC996002A85EB /* BaseResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8020CFC995002A85EB /* BaseResp.m */; };
+		6C070A7D20CFC60F002A85EB /* TSBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A7C20CFC60F002A85EB /* TSBaseParam.m */; };
+		6C070A8120CFC996002A85EB /* TSBaseResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8020CFC995002A85EB /* TSBaseResp.m */; };
 		6C070A8420CFCDEE002A85EB /* LoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8320CFCDEE002A85EB /* LoginParam.m */; };
 		6C070A8720CFCE72002A85EB /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8620CFCE72002A85EB /* LoginManager.m */; };
-		6C070A8C20CFCF69002A85EB /* UserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8B20CFCF69002A85EB /* UserBean.m */; };
+		6C070A8C20CFCF69002A85EB /* TSUserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8B20CFCF69002A85EB /* TSUserBean.m */; };
 		6C070A8F20CFCF79002A85EB /* AccountBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8E20CFCF79002A85EB /* AccountBean.m */; };
 		6C070A9220CFD020002A85EB /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A9120CFD020002A85EB /* AccountManager.m */; };
 		6C6FC05F20CFF4BE00CC9E91 /* LogoutParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC05E20CFF4BE00CC9E91 /* LogoutParam.m */; };
-		6C6FC06220CFF6BA00CC9E91 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06120CFF6BA00CC9E91 /* UserManager.m */; };
+		6C6FC06220CFF6BA00CC9E91 /* TSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06120CFF6BA00CC9E91 /* TSUserManager.m */; };
 		6C6FC06520CFF74600CC9E91 /* UserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06420CFF74600CC9E91 /* UserParam.m */; };
 		6C6FC06820CFFAAE00CC9E91 /* RegParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06720CFFAAE00CC9E91 /* RegParam.m */; };
 /* End PBXBuildFile section */
@@ -69,24 +69,24 @@
 		6C070A7620CFB6C9002A85EB /* URLSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSessionManager.h; sourceTree = "<group>"; };
 		6C070A7720CFB6C9002A85EB /* URLSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLSessionManager.m; sourceTree = "<group>"; };
 		6C070A7920CFC2E7002A85EB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6C070A7B20CFC60F002A85EB /* BaseParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseParam.h; sourceTree = "<group>"; };
-		6C070A7C20CFC60F002A85EB /* BaseParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseParam.m; sourceTree = "<group>"; };
-		6C070A7F20CFC995002A85EB /* BaseResp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResp.h; sourceTree = "<group>"; };
-		6C070A8020CFC995002A85EB /* BaseResp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResp.m; sourceTree = "<group>"; };
+		6C070A7B20CFC60F002A85EB /* TSBaseParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSBaseParam.h; sourceTree = "<group>"; };
+		6C070A7C20CFC60F002A85EB /* TSBaseParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSBaseParam.m; sourceTree = "<group>"; };
+		6C070A7F20CFC995002A85EB /* TSBaseResp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSBaseResp.h; sourceTree = "<group>"; };
+		6C070A8020CFC995002A85EB /* TSBaseResp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSBaseResp.m; sourceTree = "<group>"; };
 		6C070A8220CFCDEE002A85EB /* LoginParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginParam.h; sourceTree = "<group>"; };
 		6C070A8320CFCDEE002A85EB /* LoginParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginParam.m; sourceTree = "<group>"; };
 		6C070A8520CFCE72002A85EB /* LoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		6C070A8620CFCE72002A85EB /* LoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
-		6C070A8A20CFCF69002A85EB /* UserBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserBean.h; sourceTree = "<group>"; };
-		6C070A8B20CFCF69002A85EB /* UserBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserBean.m; sourceTree = "<group>"; };
+		6C070A8A20CFCF69002A85EB /* TSUserBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSUserBean.h; sourceTree = "<group>"; };
+		6C070A8B20CFCF69002A85EB /* TSUserBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSUserBean.m; sourceTree = "<group>"; };
 		6C070A8D20CFCF79002A85EB /* AccountBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountBean.h; sourceTree = "<group>"; };
 		6C070A8E20CFCF79002A85EB /* AccountBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountBean.m; sourceTree = "<group>"; };
 		6C070A9020CFD020002A85EB /* AccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		6C070A9120CFD020002A85EB /* AccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		6C6FC05D20CFF4BE00CC9E91 /* LogoutParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoutParam.h; sourceTree = "<group>"; };
 		6C6FC05E20CFF4BE00CC9E91 /* LogoutParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoutParam.m; sourceTree = "<group>"; };
-		6C6FC06020CFF6BA00CC9E91 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
-		6C6FC06120CFF6BA00CC9E91 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		6C6FC06020CFF6BA00CC9E91 /* TSUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSUserManager.h; sourceTree = "<group>"; };
+		6C6FC06120CFF6BA00CC9E91 /* TSUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSUserManager.m; sourceTree = "<group>"; };
 		6C6FC06320CFF74600CC9E91 /* UserParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserParam.h; sourceTree = "<group>"; };
 		6C6FC06420CFF74600CC9E91 /* UserParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserParam.m; sourceTree = "<group>"; };
 		6C6FC06620CFFAAE00CC9E91 /* RegParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegParam.h; sourceTree = "<group>"; };
@@ -192,10 +192,10 @@
 			children = (
 				6C070A7620CFB6C9002A85EB /* URLSessionManager.h */,
 				6C070A7720CFB6C9002A85EB /* URLSessionManager.m */,
-				6C070A7B20CFC60F002A85EB /* BaseParam.h */,
-				6C070A7C20CFC60F002A85EB /* BaseParam.m */,
-				6C070A7F20CFC995002A85EB /* BaseResp.h */,
-				6C070A8020CFC995002A85EB /* BaseResp.m */,
+				6C070A7B20CFC60F002A85EB /* TSBaseParam.h */,
+				6C070A7C20CFC60F002A85EB /* TSBaseParam.m */,
+				6C070A7F20CFC995002A85EB /* TSBaseResp.h */,
+				6C070A8020CFC995002A85EB /* TSBaseResp.m */,
 				6C070A8920CFCF5D002A85EB /* User */,
 				6C070A8820CFCF56002A85EB /* Account */,
 				6C070A7E20CFC987002A85EB /* Login */,
@@ -233,10 +233,10 @@
 		6C070A8920CFCF5D002A85EB /* User */ = {
 			isa = PBXGroup;
 			children = (
-				6C070A8A20CFCF69002A85EB /* UserBean.h */,
-				6C070A8B20CFCF69002A85EB /* UserBean.m */,
-				6C6FC06020CFF6BA00CC9E91 /* UserManager.h */,
-				6C6FC06120CFF6BA00CC9E91 /* UserManager.m */,
+				6C070A8A20CFCF69002A85EB /* TSUserBean.h */,
+				6C070A8B20CFCF69002A85EB /* TSUserBean.m */,
+				6C6FC06020CFF6BA00CC9E91 /* TSUserManager.h */,
+				6C6FC06120CFF6BA00CC9E91 /* TSUserManager.m */,
 				6C6FC06320CFF74600CC9E91 /* UserParam.h */,
 				6C6FC06420CFF74600CC9E91 /* UserParam.m */,
 			);
@@ -445,21 +445,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6FC06220CFF6BA00CC9E91 /* UserManager.m in Sources */,
+				6C6FC06220CFF6BA00CC9E91 /* TSUserManager.m in Sources */,
 				6C070A7820CFB6C9002A85EB /* URLSessionManager.m in Sources */,
 				6C070A0820CFB3B3002A85EB /* ViewController.m in Sources */,
 				6C070A8420CFCDEE002A85EB /* LoginParam.m in Sources */,
 				6C070A8F20CFCF79002A85EB /* AccountBean.m in Sources */,
 				6C070A9220CFD020002A85EB /* AccountManager.m in Sources */,
-				6C070A8120CFC996002A85EB /* BaseResp.m in Sources */,
+				6C070A8120CFC996002A85EB /* TSBaseResp.m in Sources */,
 				6C070A1320CFB3B3002A85EB /* main.m in Sources */,
 				6C6FC06820CFFAAE00CC9E91 /* RegParam.m in Sources */,
 				6C6FC06520CFF74600CC9E91 /* UserParam.m in Sources */,
 				6C6FC05F20CFF4BE00CC9E91 /* LogoutParam.m in Sources */,
 				6C070A8720CFCE72002A85EB /* LoginManager.m in Sources */,
-				6C070A7D20CFC60F002A85EB /* BaseParam.m in Sources */,
+				6C070A7D20CFC60F002A85EB /* TSBaseParam.m in Sources */,
 				6C070A0520CFB3B3002A85EB /* AppDelegate.m in Sources */,
-				6C070A8C20CFCF69002A85EB /* UserBean.m in Sources */,
+				6C070A8C20CFCF69002A85EB /* TSUserBean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

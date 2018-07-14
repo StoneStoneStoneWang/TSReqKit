@@ -10,15 +10,15 @@
 
 #import "UserParam.h"
 
-#import "UserBean.h"
+#import "TSUserBean.h"
 
 #import "URLSessionManager.h"
 
-typedef void(^UserResp)(UserBean *);
+typedef void(^UserResp)(TSUserBean *);
 
-@interface UserManager : NSObject
+@interface TSUserManager : NSObject
 
-+ (UserManager *)shared;
++ (TSUserManager *)shared;
 
 - (void)queryUser:(UserParam *)param andSucc:(UserResp)succ;
 

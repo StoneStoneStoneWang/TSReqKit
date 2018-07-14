@@ -6,9 +6,9 @@
 //  Copyright © 2018年 three stone 王. All rights reserved.
 //
 
-#import "BaseParam.h"
+#import "TSBaseParam.h"
 
-@interface RegParam : BaseParam
+@interface RegParam : TSBaseParam
 
 @property (nonatomic ,copy) NSString *nickname;
 

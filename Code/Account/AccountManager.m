@@ -52,7 +52,7 @@ static AccountManager *manager = nil;
     
     self.token = token;
     
-    UserBean *user = [UserBean new];
+    TSUserBean *user = [TSUserBean new];
     
     user.mobile = [[NSUserDefaults standardUserDefaults] objectForKey:@"mobile"];
     

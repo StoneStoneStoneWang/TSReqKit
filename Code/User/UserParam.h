@@ -6,9 +6,9 @@
 //  Copyright © 2018年 three stone 王. All rights reserved.
 //
 
-#import "BaseParam.h"
+#import "TSBaseParam.h"
 
-@interface UserParam : BaseParam
+@interface UserParam : TSBaseParam
 
 
 @end

@@ -32,7 +32,7 @@ static URLSessionManager *manager = nil;
     _host = host;
 }
 
-- (void)jsonReqForParam:(BaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail {
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
@@ -51,7 +51,7 @@ static URLSessionManager *manager = nil;
         
         if ([NSJSONSerialization isValidJSONObject:responseObject]) {
             
-            BaseResp *resp = [BaseResp mj_objectWithKeyValues:responseObject];
+            TSBaseResp *resp = [TSBaseResp mj_objectWithKeyValues:responseObject];
             
             if (resp.code == RespCodeTypeSucc) {
                 

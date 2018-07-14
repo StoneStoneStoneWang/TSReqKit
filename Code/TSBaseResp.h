@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger,RespCodeType) {
     RespCodeTypeTokenInvalid = 100,
 };
 
-@interface BaseResp : NSObject
+@interface TSBaseResp : NSObject
 
 @property (nonatomic ,copy) NSString *msg;
 

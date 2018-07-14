@@ -6,9 +6,9 @@
 //  Copyright © 2018年 three stone 王. All rights reserved.
 //
 
-#import "UserBean.h"
+#import "TSUserBean.h"
 #import <MJExtension/MJExtension.h>
-@implementation UserBean
+@implementation TSUserBean
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     

@@ -6,19 +6,19 @@
 //  Copyright © 2018年 three stone 王. All rights reserved.
 //
 
-#import "UserManager.h"
+#import "TSUserManager.h"
 
-static UserManager *manager = nil;
+static TSUserManager *manager = nil;
 
 #import <MJExtension/MJExtension.h>
-@implementation UserManager
+@implementation TSUserManager
 
-+ (UserManager *)shared {
++ (TSUserManager *)shared {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        manager = [UserManager new];
+        manager = [TSUserManager new];
     });
     return manager;
 }
@@ -27,7 +27,7 @@ static UserManager *manager = nil;
     
     [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
         
-        UserBean *user = [UserBean mj_objectWithKeyValues:data];
+        TSUserBean *user = [TSUserBean mj_objectWithKeyValues:data];
         
         succ(user);
         

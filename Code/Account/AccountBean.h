@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "UserBean.h"
+#import "TSUserBean.h"
 
 @interface AccountBean : NSObject
 
 @property (nonatomic ,copy) NSString *token;
 
-@property (nonatomic ,strong) UserBean *user;
+@property (nonatomic ,strong) TSUserBean *user;
 
 @end

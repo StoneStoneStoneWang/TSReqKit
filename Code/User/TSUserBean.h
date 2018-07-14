@@ -1,5 +1,5 @@
 //
-//  BaseParam.h
+//  UserBean.h
 //  TSReqKitDemo
 //
 //  Created by three stone 王 on 2018/6/12.
@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BaseParam : NSObject
+@interface TSUserBean : NSObject
 
-- (NSString *)reqName;
+@property (nonatomic ,copy) NSString *uid;
 
+@property (nonatomic ,copy) NSString *mobile;
 @end
