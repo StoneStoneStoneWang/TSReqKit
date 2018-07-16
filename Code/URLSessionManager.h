@@ -24,4 +24,6 @@ typedef void(^HttpFailureBlock)(void);
 
 - (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
 
+- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
 @end
+
