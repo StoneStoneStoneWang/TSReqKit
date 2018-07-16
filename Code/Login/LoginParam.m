@@ -12,6 +12,6 @@
 
 - (NSString *)reqName {
     
-    return @"/api/user/public/login?";
+    return @"/user/public/login?";
 }
 @end

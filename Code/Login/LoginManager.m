@@ -32,7 +32,7 @@ static LoginManager *manager = nil;
     
     return true;
 }
-- (void)login:(LoginParam *)param andSucc:(LoginResp)succ {
+- (void)login:(LoginParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail {
     
     [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
         
@@ -46,7 +46,7 @@ static LoginManager *manager = nil;
         
     } andFail:^{
         
-        
+        fail();
     }];
 }
 - (void)logout:(LogoutParam *)param {

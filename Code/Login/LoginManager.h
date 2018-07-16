@@ -24,7 +24,7 @@ typedef void(^LoginResp)(AccountBean *);
 - (BOOL)isLogin;
 #pragma mark --- 登陆
 
-- (void)login:(LoginParam *)param andSucc:(LoginResp)succ;
+- (void)login:(LoginParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail;
 
 #pragma mark --- 退出登陆
 

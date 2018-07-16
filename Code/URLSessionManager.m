@@ -46,7 +46,9 @@ static URLSessionManager *manager = nil;
         [params setObject:[AccountManager shared].token forKey:@"token"];
     }
     
-    [manager POST:[NSString stringWithFormat:@"%@%@",self.host,[param reqName]] parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager POST:[NSString stringWithFormat:@"%@%@",self.host,[param reqName]] parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -65,7 +67,6 @@ static URLSessionManager *manager = nil;
             } else {
                 
                 // 其他失败
-                
                 fail();
             }
         } else {
@@ -75,8 +76,9 @@ static URLSessionManager *manager = nil;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        fail();
+        NSLog(@"%@",error);
         
+        fail();
     }];
 }
 @end
