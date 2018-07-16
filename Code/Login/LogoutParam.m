@@ -12,7 +12,7 @@
 
 - (NSString *)reqName {
     
-    return @"/api/user/public/logout?";
+    return @"/user/public/logout?";
 }
 
 @end

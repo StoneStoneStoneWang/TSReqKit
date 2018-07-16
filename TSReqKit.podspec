@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "TSReqKit"
-s.version      = "1.0.3"
+s.version      = "1.0.4"
 s.summary      = "A Lib For Req."
 s.description  = <<-DESC
 TSReqKit 是一个网络请求封装
@@ -22,7 +22,7 @@ s.source       = { :git => "https://github.com/StoneStoneStoneWang/TSReqKit.git"
 
 s.source_files = "Code/**/*.{h,m}"
 
-s.dependency 'AFNetworking', '~> 3.0'
+s.dependency 'AFNetworking'
 
 s.dependency 'MJExtension'
 

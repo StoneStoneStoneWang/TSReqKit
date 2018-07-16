@@ -19,6 +19,9 @@ typedef void(^LoginResp)(AccountBean *);
 
 + (LoginManager *)shared;
 
+#pragma mark --- 是否登录
+
+- (BOOL)isLogin;
 #pragma mark --- 登陆
 
 - (void)login:(LoginParam *)param andSucc:(LoginResp)succ;

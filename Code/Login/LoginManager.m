@@ -10,6 +10,7 @@
 #import "URLSessionManager.h"
 #import <MJExtension/MJExtension.h>
 #import "AccountManager.h"
+#import "TSCacheUtil.h"
 static LoginManager *manager = nil;
 
 @implementation LoginManager
@@ -24,6 +25,13 @@ static LoginManager *manager = nil;
     });
     return manager;
 }
+- (BOOL)isLogin {
+    
+    if (![AccountManager shared].token || [[AccountManager shared].token isEqualToString:@""])
+        return false;
+    
+    return true;
+}
 - (void)login:(LoginParam *)param andSucc:(LoginResp)succ {
     
     [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
@@ -31,6 +39,8 @@ static LoginManager *manager = nil;
         AccountBean *acc = [AccountBean mj_objectWithKeyValues:data];
         
         [[AccountManager shared] save:acc];
+        
+        [[TSCacheUtil shared] setObject:acc.user forKey:[NSString stringWithFormat:@"USER_%@",acc.user.mobile]];
         
         succ(acc);
         

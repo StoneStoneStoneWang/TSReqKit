@@ -15,4 +15,5 @@
     return @{@"uid":@"id"};
 }
 
+MJExtensionCodingImplementation
 @end

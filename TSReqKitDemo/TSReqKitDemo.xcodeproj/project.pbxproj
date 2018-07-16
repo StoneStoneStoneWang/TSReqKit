@@ -29,6 +29,7 @@
 		6C6FC06220CFF6BA00CC9E91 /* TSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06120CFF6BA00CC9E91 /* TSUserManager.m */; };
 		6C6FC06520CFF74600CC9E91 /* UserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06420CFF74600CC9E91 /* UserParam.m */; };
 		6C6FC06820CFFAAE00CC9E91 /* RegParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06720CFFAAE00CC9E91 /* RegParam.m */; };
+		6CE4E88E20FC389500901F47 /* TSCacheUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE4E88D20FC389500901F47 /* TSCacheUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,9 @@
 		6C6FC06420CFF74600CC9E91 /* UserParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserParam.m; sourceTree = "<group>"; };
 		6C6FC06620CFFAAE00CC9E91 /* RegParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegParam.h; sourceTree = "<group>"; };
 		6C6FC06720CFFAAE00CC9E91 /* RegParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegParam.m; sourceTree = "<group>"; };
+		6CE4E88C20FC389500901F47 /* TSCacheUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSCacheUtil.h; sourceTree = "<group>"; };
+		6CE4E88D20FC389500901F47 /* TSCacheUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSCacheUtil.m; sourceTree = "<group>"; };
+		6CE4E88F20FC3D7E00901F47 /* TSReqKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSReqKit.h; sourceTree = "<group>"; };
 		A392E030161ADBC7FA0C9F86 /* Pods_TSReqKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSReqKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA87D20D57D044581111E36C /* Pods-TSReqKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSReqKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TSReqKitDemo/Pods-TSReqKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +200,8 @@
 				6C070A7C20CFC60F002A85EB /* TSBaseParam.m */,
 				6C070A7F20CFC995002A85EB /* TSBaseResp.h */,
 				6C070A8020CFC995002A85EB /* TSBaseResp.m */,
+				6CE4E88F20FC3D7E00901F47 /* TSReqKit.h */,
+				6CE4E88B20FC387F00901F47 /* CacheUtil */,
 				6C070A8920CFCF5D002A85EB /* User */,
 				6C070A8820CFCF56002A85EB /* Account */,
 				6C070A7E20CFC987002A85EB /* Login */,
@@ -241,6 +247,15 @@
 				6C6FC06420CFF74600CC9E91 /* UserParam.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		6CE4E88B20FC387F00901F47 /* CacheUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6CE4E88C20FC389500901F47 /* TSCacheUtil.h */,
+				6CE4E88D20FC389500901F47 /* TSCacheUtil.m */,
+			);
+			path = CacheUtil;
 			sourceTree = "<group>";
 		};
 		959F4E6D584509F6BB4BBD17 /* Pods */ = {
@@ -394,11 +409,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TSReqKitDemo/Pods-TSReqKitDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -446,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C6FC06220CFF6BA00CC9E91 /* TSUserManager.m in Sources */,
+				6CE4E88E20FC389500901F47 /* TSCacheUtil.m in Sources */,
 				6C070A7820CFB6C9002A85EB /* URLSessionManager.m in Sources */,
 				6C070A0820CFB3B3002A85EB /* ViewController.m in Sources */,
 				6C070A8420CFCDEE002A85EB /* LoginParam.m in Sources */,

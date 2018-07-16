@@ -15,15 +15,18 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - MJExtension (3.0.15)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - MJExtension
+  - YYCache
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   MJExtension: 3f039575db1b135a20699ad298713b26acec1528
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 8772a7e02c7e72fb4900b9f22a7329ff8b1b89dd
+PODFILE CHECKSUM: 8e136bb864790cc89cbd6ba47b566972c7cdd5b0
 
 COCOAPODS: 1.3.1

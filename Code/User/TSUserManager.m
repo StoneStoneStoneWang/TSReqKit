@@ -11,6 +11,10 @@
 static TSUserManager *manager = nil;
 
 #import <MJExtension/MJExtension.h>
+
+#import "TSCacheUtil.h"
+
+#import "AccountManager.h"
 @implementation TSUserManager
 
 + (TSUserManager *)shared {
@@ -29,6 +33,8 @@ static TSUserManager *manager = nil;
         
         TSUserBean *user = [TSUserBean mj_objectWithKeyValues:data];
         
+        [self saveUser:user];
+        
         succ(user);
         
     } andFail:^{
@@ -36,4 +42,13 @@ static TSUserManager *manager = nil;
         
     }];
 }
+- (TSUserBean *)queryUser {
+    
+    return (TSUserBean *)[[TSCacheUtil shared] objectForKey:[NSString stringWithFormat:@"%@_%@",[AccountManager shared].mobile,[AccountManager shared].uid]];
+}
+- (void)saveUser:(TSUserBean *)user {
+    
+    [[TSCacheUtil shared] setObject:user forKey:[NSString stringWithFormat:@"%@_%@",user.mobile,user.uid]];
+}
+
 @end

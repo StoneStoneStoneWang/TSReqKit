@@ -10,4 +10,5 @@
 
 @interface LogoutParam : TSBaseParam
 
+
 @end

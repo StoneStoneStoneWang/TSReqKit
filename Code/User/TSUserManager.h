@@ -23,5 +23,8 @@ typedef void(^UserResp)(TSUserBean *);
 - (void)queryUser:(UserParam *)param andSucc:(UserResp)succ;
 
 //- (void)uploadUserHeader:(id)param and
+- (void)saveUser:(TSUserBean *)user ;
+
+- (TSUserBean *)queryUser;
 
 @end

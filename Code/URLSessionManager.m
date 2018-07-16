@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
 #import "AccountManager.h"
+#import "LoginManager.h"
 static URLSessionManager *manager = nil;
 @interface URLSessionManager()
 
@@ -40,7 +41,7 @@ static URLSessionManager *manager = nil;
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
     
-    if (![AccountManager shared].token) {
+    if ([LoginManager shared].isLogin) {
         
         [params setObject:[AccountManager shared].token forKey:@"token"];
     }

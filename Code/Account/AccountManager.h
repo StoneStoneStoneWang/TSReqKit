@@ -14,6 +14,10 @@
 
 @property (nonatomic ,copy) NSString *token;
 
+@property (nonatomic ,copy) NSString *uid;
+
+@property (nonatomic ,copy) NSString *mobile;
+
 - (void)save:(AccountBean *)acc;
 
 - (void)clear;

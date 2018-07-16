@@ -28,7 +28,13 @@ static AccountManager *manager = nil;
     
     [[NSUserDefaults standardUserDefaults] setObject:acc.user.mobile forKey:@"mobile"];
     
+    [[NSUserDefaults standardUserDefaults] setObject:acc.user.uid forKey:@"uid"];
+    
     self.token = acc.token;
+    
+    self.mobile = acc.user.mobile;
+    
+    self.uid = acc.user.uid;
 }
 - (void)clear {
     
@@ -36,7 +42,13 @@ static AccountManager *manager = nil;
     
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"mobile"];
     
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"uid"];
+    
     self.token = @"";
+    
+    self.uid = @"";
+    
+    self.mobile = @"";
 }
 - (AccountBean *)query {
     
@@ -55,6 +67,8 @@ static AccountManager *manager = nil;
     TSUserBean *user = [TSUserBean new];
     
     user.mobile = [[NSUserDefaults standardUserDefaults] objectForKey:@"mobile"];
+    
+    user.uid = [[NSUserDefaults standardUserDefaults] objectForKey:@"uid"];
     
     acc.user = user;
     
