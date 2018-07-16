@@ -18,6 +18,8 @@
 
 @property (nonatomic ,copy) NSString *mobile;
 
+@property (nonatomic ,copy) NSString *avatar;
+
 - (void)save:(AccountBean *)acc;
 
 - (void)clear;

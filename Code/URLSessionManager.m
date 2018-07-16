@@ -39,12 +39,19 @@ static URLSessionManager *manager = nil;
     
     [manager.requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
     
     if ([LoginManager shared].isLogin) {
         
         [params setObject:[AccountManager shared].token forKey:@"token"];
+        
+        [manager.requestSerializer setValue:[AccountManager shared].token forHTTPHeaderField:@"XX-Token"];
+        
     }
+    
+    [manager.requestSerializer setValue:@"iphone" forHTTPHeaderField:@"XX-Device-Type"];
     
     [manager POST:[NSString stringWithFormat:@"%@%@",self.host,[param reqName]] parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         

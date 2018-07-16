@@ -12,6 +12,6 @@
 
 - (NSString *)reqName {
     
-    return @"/api/user/profile/userInfo?";
+    return @"user/profile/userInfo?";
 }
 @end
