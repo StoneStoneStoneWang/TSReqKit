@@ -29,7 +29,7 @@ static TSUserManager *manager = nil;
 
 - (void)queryUser:(UserParam *)param andSucc:(UserResp)succ {
     
-    [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
+    [[URLSessionManager shared] jsonGetReqForParam:param andSucc:^(id data) {
         
         TSUserBean *user = [TSUserBean mj_objectWithKeyValues:data];
         
