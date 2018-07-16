@@ -20,7 +20,10 @@
 
 @property (nonatomic ,copy) NSString *avatar;
 
+@property (nonatomic ,copy) NSString *nickName;
+
 - (void)save:(AccountBean *)acc;
+
 
 - (void)clear;
 

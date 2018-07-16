@@ -11,6 +11,7 @@
 #import <MJExtension/MJExtension.h>
 #import "AccountManager.h"
 #import "TSCacheUtil.h"
+#import "TSUserManager.h"
 static LoginManager *manager = nil;
 
 @implementation LoginManager
@@ -40,7 +41,7 @@ static LoginManager *manager = nil;
         
         [[AccountManager shared] save:acc];
         
-        [[TSCacheUtil shared] setObject:acc.user forKey:[NSString stringWithFormat:@"USER_%@",acc.user.mobile]];
+        [[TSUserManager shared] saveUser:acc.user];
         
         succ(acc);
         

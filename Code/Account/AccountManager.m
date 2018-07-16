@@ -32,6 +32,8 @@ static AccountManager *manager = nil;
     
     [[NSUserDefaults standardUserDefaults] setObject:acc.user.avatar forKey:@"avatar"];
     
+    [[NSUserDefaults standardUserDefaults] setObject:acc.user.user_nickname forKey:@"user_nickname"];
+    
     self.token = acc.token;
     
     self.mobile = acc.user.mobile;
@@ -39,6 +41,8 @@ static AccountManager *manager = nil;
     self.uid = acc.user.uid;
     
     self.avatar = acc.user.avatar;
+    
+    self.nickName = acc.user.user_nickname;
 }
 - (void)clear {
     
@@ -50,6 +54,8 @@ static AccountManager *manager = nil;
     
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"avatar"];
     
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"user_nickname"];
+    
     self.token = @"";
     
     self.uid = @"";
@@ -57,6 +63,8 @@ static AccountManager *manager = nil;
     self.mobile = @"";
     
     self.avatar = @"";
+    
+    self.nickName = @"";
 }
 - (AccountBean *)query {
     
@@ -79,6 +87,8 @@ static AccountManager *manager = nil;
     user.uid = [[NSUserDefaults standardUserDefaults] objectForKey:@"uid"];
     
     user.avatar =  [[NSUserDefaults standardUserDefaults] objectForKey:@"avatar"];
+    
+    user.user_nickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_nickname"];
     
     acc.user = user;
     
