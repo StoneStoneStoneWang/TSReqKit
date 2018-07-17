@@ -48,7 +48,7 @@ static TSUserManager *manager = nil;
 }
 - (void)saveUser:(TSUserBean *)user {
     
-    [[TSCacheUtil shared] setObject:user forKey:[NSString stringWithFormat:@"%@_%@",user.mobile,user.uid]];
+    [[TSCacheUtil shared] setObject:user forKey:[NSString stringWithFormat:@"%@_%@",[AccountManager shared].mobile,[AccountManager shared].uid]];
 }
 
 @end
