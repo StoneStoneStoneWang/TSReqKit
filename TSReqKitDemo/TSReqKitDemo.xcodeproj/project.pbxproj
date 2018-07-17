@@ -25,6 +25,7 @@
 		6C070A8C20CFCF69002A85EB /* TSUserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8B20CFCF69002A85EB /* TSUserBean.m */; };
 		6C070A8F20CFCF79002A85EB /* AccountBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A8E20CFCF79002A85EB /* AccountBean.m */; };
 		6C070A9220CFD020002A85EB /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C070A9120CFD020002A85EB /* AccountManager.m */; };
+		6C4E937D20FDED2600B0BCBE /* UploadUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4E937C20FDED2600B0BCBE /* UploadUtil.m */; };
 		6C6FC05F20CFF4BE00CC9E91 /* LogoutParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC05E20CFF4BE00CC9E91 /* LogoutParam.m */; };
 		6C6FC06220CFF6BA00CC9E91 /* TSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06120CFF6BA00CC9E91 /* TSUserManager.m */; };
 		6C6FC06520CFF74600CC9E91 /* UserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FC06420CFF74600CC9E91 /* UserParam.m */; };
@@ -84,6 +85,8 @@
 		6C070A8E20CFCF79002A85EB /* AccountBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountBean.m; sourceTree = "<group>"; };
 		6C070A9020CFD020002A85EB /* AccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		6C070A9120CFD020002A85EB /* AccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		6C4E937B20FDED2600B0BCBE /* UploadUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadUtil.h; sourceTree = "<group>"; };
+		6C4E937C20FDED2600B0BCBE /* UploadUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadUtil.m; sourceTree = "<group>"; };
 		6C6FC05D20CFF4BE00CC9E91 /* LogoutParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoutParam.h; sourceTree = "<group>"; };
 		6C6FC05E20CFF4BE00CC9E91 /* LogoutParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoutParam.m; sourceTree = "<group>"; };
 		6C6FC06020CFF6BA00CC9E91 /* TSUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSUserManager.h; sourceTree = "<group>"; };
@@ -201,6 +204,7 @@
 				6C070A7F20CFC995002A85EB /* TSBaseResp.h */,
 				6C070A8020CFC995002A85EB /* TSBaseResp.m */,
 				6CE4E88F20FC3D7E00901F47 /* TSReqKit.h */,
+				6C4E937A20FDED1700B0BCBE /* Upload */,
 				6CE4E88B20FC387F00901F47 /* CacheUtil */,
 				6C070A8920CFCF5D002A85EB /* User */,
 				6C070A8820CFCF56002A85EB /* Account */,
@@ -247,6 +251,15 @@
 				6C6FC06420CFF74600CC9E91 /* UserParam.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		6C4E937A20FDED1700B0BCBE /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				6C4E937B20FDED2600B0BCBE /* UploadUtil.h */,
+				6C4E937C20FDED2600B0BCBE /* UploadUtil.m */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 		6CE4E88B20FC387F00901F47 /* CacheUtil */ = {
@@ -474,6 +487,7 @@
 				6C6FC06820CFFAAE00CC9E91 /* RegParam.m in Sources */,
 				6C6FC06520CFF74600CC9E91 /* UserParam.m in Sources */,
 				6C6FC05F20CFF4BE00CC9E91 /* LogoutParam.m in Sources */,
+				6C4E937D20FDED2600B0BCBE /* UploadUtil.m in Sources */,
 				6C070A8720CFCE72002A85EB /* LoginManager.m in Sources */,
 				6C070A7D20CFC60F002A85EB /* TSBaseParam.m in Sources */,
 				6C070A0520CFB3B3002A85EB /* AppDelegate.m in Sources */,

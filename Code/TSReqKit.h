@@ -31,3 +31,5 @@
 #import "LogoutParam.h"
 
 #import "RegParam.h"
+
+#import "UploadUtil.h"
