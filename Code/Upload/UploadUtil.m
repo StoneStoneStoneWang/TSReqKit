@@ -60,6 +60,10 @@ static UploadUtil *manager = nil;
     
     return manager;
 }
+
+- (void)setHost:(NSString *)host {
+    _host = host;
+}
 - (void)upload:(UploadImageParam *)param andProgress:(void (^)(NSProgress *))progress andSucc:(void (^)(UIImage *, id ))succ andFail:(void (^)(void))fail {
     
     [self.reqManager.requestSerializer setValue:[AccountManager shared].token forHTTPHeaderField:@"XX-Token"];

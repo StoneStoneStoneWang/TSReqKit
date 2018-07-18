@@ -21,6 +21,9 @@
 
 + (UploadUtil *)shared;
 
+- (void)setHost:(NSString *)host;
+
+
 - (void)upload:(UploadImageParam *)param andProgress:(void (^)(NSProgress *))progress andSucc:(void (^)(UIImage *, id))succ andFail:(void (^)(void))fail;
 
 @end
