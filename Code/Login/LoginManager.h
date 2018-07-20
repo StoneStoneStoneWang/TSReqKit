@@ -14,7 +14,6 @@
 
 typedef void(^LoginResp)(AccountBean *);
 
-
 @interface LoginManager : NSObject
 
 + (LoginManager *)shared;
@@ -31,6 +30,5 @@ typedef void(^LoginResp)(AccountBean *);
 - (void)logout:(LogoutParam *)param;
 
 #pragma mark --- 注册
-
-//- (void)reg:(RegParam *)param andSucc:(LoginResp)succ;
+- (void)reg:(RegParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail;
 @end

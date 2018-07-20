@@ -12,7 +12,7 @@
 
 - (NSString *)reqName {
     
-    return @"/api/user/public/register?";
+    return @"/user/public/register?";
 }
 
 @end

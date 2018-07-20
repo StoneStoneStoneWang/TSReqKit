@@ -62,5 +62,21 @@ static LoginManager *manager = nil;
     
     [[AccountManager shared] clear];
 }
-
+- (void)reg:(RegParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail {
+    
+    [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
+        
+        AccountBean *acc = [AccountBean mj_objectWithKeyValues:data];
+        
+        [[AccountManager shared] save:acc];
+        
+        [[TSUserManager shared] saveUser:acc.user];
+        
+        succ(acc);
+        
+    } andFail:^{
+        
+        fail();
+    }];
+}
 @end
