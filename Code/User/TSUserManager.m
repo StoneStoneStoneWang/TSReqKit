@@ -42,6 +42,19 @@ static TSUserManager *manager = nil;
         
     }];
 }
+- (void)queryUser:(UserParam *)param andSucc:(UserResp)succ andFail:(HttpFailureBlock)fail andException:(HttpExceptionBlock)exception andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid {
+    
+    [[URLSessionManager shared] jsonGetReqForParam:param andSucc:^(id data) {
+        
+        TSUserBean *user = [TSUserBean mj_objectWithKeyValues:data];
+        
+        [self saveUser:user];
+        
+        succ(user);
+        
+    } andFail:fail andTokenInvalid:tokenInvalid andException:exception];
+}
+
 - (TSUserBean *)queryUser {
     
     return (TSUserBean *)[[TSCacheUtil shared] objectForKey:[NSString stringWithFormat:@"%@_%@",[AccountManager shared].mobile,[AccountManager shared].uid]];

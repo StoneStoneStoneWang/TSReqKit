@@ -132,6 +132,8 @@ static URLSessionManager *manager = nil;
             } else if (resp.code == RespCodeTypeTokenInvalid) {
                 
                 // token 失效
+                [[AccountManager shared] clear];
+                
                 tokenInvalid();
             } else {
                 
@@ -226,6 +228,8 @@ static URLSessionManager *manager = nil;
                 
             } else if (resp.code == RespCodeTypeTokenInvalid) {
                 
+                [[AccountManager shared] clear];
+                
                 // token 失效
                 tokenInvalid();
             } else {
@@ -237,7 +241,6 @@ static URLSessionManager *manager = nil;
                     
                     fail();
                 }
-                // 其他失败
             }
         } else {
             
