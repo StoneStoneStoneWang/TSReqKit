@@ -103,6 +103,54 @@ static URLSessionManager *manager = nil;
         fail();
     }];
 }
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid andException:(HttpExceptionBlock)exception {
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
+    
+    if ([LoginManager shared].isLogin) {
+        
+        [self.reqManager.requestSerializer setValue:[AccountManager shared].token forHTTPHeaderField:@"XX-Token"];
+        
+    }
+    
+    [self.reqManager.requestSerializer setValue:@"iphone" forHTTPHeaderField:@"XX-Device-Type"];
+    
+    [self.reqManager POST:[NSString stringWithFormat:@"%@%@",self.host,[param reqName]] parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if ([NSJSONSerialization isValidJSONObject:responseObject]) {
+            
+            TSBaseResp *resp = [TSBaseResp mj_objectWithKeyValues:responseObject];
+            
+            if (resp.code == RespCodeTypeSucc) {
+                
+                succ(resp.data);
+                
+            } else if (resp.code == RespCodeTypeTokenInvalid) {
+                
+                // token 失效
+                tokenInvalid();
+            } else {
+                
+                // 其他失败
+                fail();
+            }
+        } else {
+            
+            fail();
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+        
+        exception();
+    }];
+}
+
 - (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
@@ -147,49 +195,60 @@ static URLSessionManager *manager = nil;
             
             fail();
         }
-        
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         NSLog(@"%@",error);
         
         fail();
     }];
+}
+- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid andException:(HttpExceptionBlock)exception {
     
-    //    [self.reqManager POST:[NSString stringWithFormat:@"%@%@",self.host,[param reqName]] parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-    //
-    //    } progress:^(NSProgress * _Nonnull uploadProgress) {
-    //
-    //    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    //
-    //        if ([NSJSONSerialization isValidJSONObject:responseObject]) {
-    //
-    //            TSBaseResp *resp = [TSBaseResp mj_objectWithKeyValues:responseObject];
-    //
-    //            if (resp.code == RespCodeTypeSucc) {
-    //
-    //                succ(resp.data);
-    //
-    //            } else if (resp.code == RespCodeTypeTokenInvalid) {
-    //
-    //                // token 失效
-    //
-    //            } else {
-    //
-    //                // 其他失败
-    //                fail();
-    //            }
-    //        } else {
-    //
-    //            fail();
-    //        }
-    //
-    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-    //
-    //        NSLog(@"%@",error);
-    //
-    //        fail();
-    //    }];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
+    
+    if ([LoginManager shared].isLogin) {
+        
+        [self.reqManager.requestSerializer setValue:[AccountManager shared].token forHTTPHeaderField:@"XX-Token"];
+    }
+    [self.reqManager.requestSerializer setValue:@"iphone" forHTTPHeaderField:@"XX-Device-Type"];
+    
+    [self.reqManager GET:[NSString stringWithFormat:@"%@%@",self.host,[param reqName]] parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if ([NSJSONSerialization isValidJSONObject:responseObject]) {
+            
+            TSBaseResp *resp = [TSBaseResp mj_objectWithKeyValues:responseObject];
+            
+            if (resp.code == RespCodeTypeSucc) {
+                
+                succ(resp.data);
+                
+            } else if (resp.code == RespCodeTypeTokenInvalid) {
+                
+                // token 失效
+                tokenInvalid();
+            } else {
+                
+                if ([resp.msg isEqualToString:@"您没有创建店铺!"]) {
+                    
+                    
+                } else {
+                    
+                    fail();
+                }
+                // 其他失败
+            }
+        } else {
+            
+            fail();
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+        
+        exception();
+    }];
 }
 @end
 

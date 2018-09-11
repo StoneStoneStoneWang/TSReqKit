@@ -16,14 +16,22 @@ typedef void(^HttpSuccessBlock)(id);
 
 typedef void(^HttpFailureBlock)(void);
 
+typedef void(^HttpExceptionBlock)(void);
+
+typedef void(^HttpTokenInvalidBlock)(void);
+
 @interface URLSessionManager : NSObject
 
 + (URLSessionManager *)shared;
 
 - (void)setHost:(NSString *)host;
 
-- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail ;
+
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock )tokenInvalid andException:(HttpExceptionBlock)exception;
 
 - (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
+
+- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock )tokenInvalid andException:(HttpExceptionBlock)exception;
 @end
 

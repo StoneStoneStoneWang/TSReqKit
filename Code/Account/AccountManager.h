@@ -24,7 +24,6 @@
 
 - (void)save:(AccountBean *)acc;
 
-
 - (void)clear;
 
 - (AccountBean *)query;
