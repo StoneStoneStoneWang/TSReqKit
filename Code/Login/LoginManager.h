@@ -11,6 +11,7 @@
 #import "AccountBean.h"
 #import "LogoutParam.h"
 #import "RegParam.h"
+#import "URLSessionManager.h"
 
 typedef void(^LoginResp)(AccountBean *);
 
@@ -24,6 +25,10 @@ typedef void(^LoginResp)(AccountBean *);
 #pragma mark --- 登陆
 
 - (void)login:(LoginParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail;
+/*
+ 上面的弃用
+ */
+- (void)login:(LoginParam *)param andSucc:(LoginResp)succ andFail:(HttpFailureMsgBlock) fail andException:(HttpExceptionBlock)exception;
 
 #pragma mark --- 退出登陆
 
@@ -31,4 +36,9 @@ typedef void(^LoginResp)(AccountBean *);
 
 #pragma mark --- 注册
 - (void)reg:(RegParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail;
+/*
+ 上面的弃用
+ */
+- (void)reg:(RegParam *)param andSucc:(LoginResp)succ andFail:(HttpFailureMsgBlock) fail andException:(HttpExceptionBlock)exception;
+
 @end

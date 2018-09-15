@@ -33,6 +33,20 @@ static LoginManager *manager = nil;
     
     return true;
 }
+- (void)login:(LoginParam *)param andSucc:(LoginResp)succ andFail:(HttpFailureMsgBlock)fail andException:(HttpExceptionBlock)exception {
+    
+    [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
+        
+        AccountBean *acc = [AccountBean mj_objectWithKeyValues:data];
+        
+        [[AccountManager shared] save:acc];
+        
+        [[TSUserManager shared] saveUser:acc.user];
+        
+        succ(acc);
+        
+    } andFail:fail andTokenInvalid:nil andException:exception];
+}
 - (void)login:(LoginParam *)param andSucc:(LoginResp)succ andFail:(void(^)(void)) fail {
     
     [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
@@ -78,5 +92,19 @@ static LoginManager *manager = nil;
         
         fail();
     }];
+}
+- (void)reg:(RegParam *)param andSucc:(LoginResp)succ andFail:(HttpFailureMsgBlock)fail andException:(HttpExceptionBlock)exception {
+    
+    [[URLSessionManager shared] jsonReqForParam:param andSucc:^(id data) {
+        
+        AccountBean *acc = [AccountBean mj_objectWithKeyValues:data];
+        
+        [[AccountManager shared] save:acc];
+        
+        [[TSUserManager shared] saveUser:acc.user];
+        
+        succ(acc);
+    } andFail:fail andTokenInvalid:nil andException:exception];
+    
 }
 @end
