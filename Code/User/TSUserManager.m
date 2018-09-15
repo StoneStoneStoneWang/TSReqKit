@@ -42,7 +42,7 @@ static TSUserManager *manager = nil;
         
     }];
 }
-- (void)queryUser:(UserParam *)param andSucc:(UserResp)succ andFail:(HttpFailureBlock)fail andException:(HttpExceptionBlock)exception andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid {
+- (void)queryUser:(UserParam *)param andSucc:(UserResp)succ andFail:(HttpFailureMsgBlock)fail andException:(HttpExceptionBlock)exception andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid {
     
     [[URLSessionManager shared] jsonGetReqForParam:param andSucc:^(id data) {
         
@@ -51,8 +51,9 @@ static TSUserManager *manager = nil;
         [self saveUser:user];
         
         succ(user);
+    } andFail:^(NSString *msg) {
         
-    } andFail:fail andTokenInvalid:tokenInvalid andException:exception];
+    } andTokenInvalid:tokenInvalid andException:exception];
 }
 
 - (TSUserBean *)queryUser {

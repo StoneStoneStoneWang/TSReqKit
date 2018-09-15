@@ -103,7 +103,7 @@ static URLSessionManager *manager = nil;
         fail();
     }];
 }
-- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid andException:(HttpExceptionBlock)exception {
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureMsgBlock)fail andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid andException:(HttpExceptionBlock)exception {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
     
@@ -138,11 +138,11 @@ static URLSessionManager *manager = nil;
             } else {
                 
                 // 其他失败
-                fail();
+                fail(resp.msg);
             }
         } else {
             
-            fail();
+            fail(@"不是json");
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -204,7 +204,7 @@ static URLSessionManager *manager = nil;
         fail();
     }];
 }
-- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid andException:(HttpExceptionBlock)exception {
+- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureMsgBlock)fail andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid andException:(HttpExceptionBlock)exception {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[param mj_keyValues]];
     
@@ -239,12 +239,12 @@ static URLSessionManager *manager = nil;
                     
                 } else {
                     
-                    fail();
+                    fail(resp.msg);
                 }
             }
         } else {
             
-            fail();
+            fail(@"不是json");
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

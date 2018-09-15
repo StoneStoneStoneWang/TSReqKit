@@ -16,6 +16,8 @@ typedef void(^HttpSuccessBlock)(id);
 
 typedef void(^HttpFailureBlock)(void);
 
+typedef void(^HttpFailureMsgBlock)(NSString *msg);
+
 typedef void(^HttpExceptionBlock)(void);
 
 typedef void(^HttpTokenInvalidBlock)(void);
@@ -28,10 +30,10 @@ typedef void(^HttpTokenInvalidBlock)(void);
 
 - (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail ;
 
-- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock )tokenInvalid andException:(HttpExceptionBlock)exception;
+- (void)jsonReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureMsgBlock)fail andTokenInvalid:(HttpTokenInvalidBlock )tokenInvalid andException:(HttpExceptionBlock)exception;
 
 - (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail;
 
-- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureBlock)fail andTokenInvalid:(HttpTokenInvalidBlock )tokenInvalid andException:(HttpExceptionBlock)exception;
+- (void)jsonGetReqForParam:(TSBaseParam *)param andSucc:(HttpSuccessBlock)succ andFail:(HttpFailureMsgBlock)fail andTokenInvalid:(HttpTokenInvalidBlock )tokenInvalid andException:(HttpExceptionBlock)exception;
 @end
 

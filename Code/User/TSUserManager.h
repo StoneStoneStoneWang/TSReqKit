@@ -22,7 +22,7 @@ typedef void(^UserResp)(TSUserBean *);
 
 - (void)queryUser:(UserParam *)param andSucc:(UserResp)succ;
 
-- (void)queryUser:(UserParam *)param andSucc:(UserResp)succ andFail:(HttpFailureBlock)fail andException:(HttpExceptionBlock)exception andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid;
+- (void)queryUser:(UserParam *)param andSucc:(UserResp)succ andFail:(HttpFailureMsgBlock)fail andException:(HttpExceptionBlock)exception andTokenInvalid:(HttpTokenInvalidBlock)tokenInvalid;
 
 //- (void)uploadUserHeader:(id)param and
 - (void)saveUser:(TSUserBean *)user ;
