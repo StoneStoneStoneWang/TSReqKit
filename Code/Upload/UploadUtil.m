@@ -7,7 +7,7 @@
 //
 
 #import "UploadUtil.h"
-#import <AFNetworking/AFNetworking.h>
+
 #import "AccountManager.h"
 #import "TSBaseResp.h"
 #import <MJExtension/MJExtension.h>
@@ -15,9 +15,9 @@ static UploadUtil *manager = nil;
 
 @interface UploadUtil()
 
-@property (nonatomic ,copy) NSString *host;
+@property (nonatomic ,copy ,readwrite) NSString *host;
 
-@property (nonatomic ,strong) AFHTTPSessionManager *reqManager;
+@property (nonatomic ,strong ,readwrite) AFHTTPSessionManager *reqManager;
 @end
 
 @implementation UploadImageParam

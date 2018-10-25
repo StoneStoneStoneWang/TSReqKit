@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TSBaseParam.h"
+#import <AFNetworking/AFNetworking.h>
 @interface UploadImageParam: TSBaseParam
 
 @property (nonatomic ,strong) UIImage *image;
@@ -19,10 +20,13 @@
 
 @interface UploadUtil : NSObject
 
+@property (nonatomic ,strong ,readonly) AFHTTPSessionManager *reqManager;
+
+@property (nonatomic ,copy ,readonly) NSString *host;
+
 + (UploadUtil *)shared;
 
 - (void)setHost:(NSString *)host;
-
 
 - (void)upload:(UploadImageParam *)param andProgress:(void (^)(NSProgress *))progress andSucc:(void (^)(UIImage *, id))succ andFail:(void (^)(void))fail;
 
